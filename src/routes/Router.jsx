@@ -5,7 +5,7 @@ import { Error } from '../views/Error'
 import { ProvedoresVer } from '../views/proveedores/Proveedores.Ver'
 import { MaterialesVer } from '../views/materiales/Materiales.Ver'
 import { NotasVer } from '../views/notas/Notas.Ver'
-import { ObrasVer } from '../views/obras/obras.Ver'
+import { ObrasVer } from '../views/obras/Obras.Ver'
 import { NotasDetailsVer } from '../views/notasDetails/NotasDetails.Ver'
 import { NotasDetailsAdd } from '../views/notasDetails/NotasDetails.Add'
 
