@@ -35,3 +35,12 @@ export const DeleteDetalleNota = async id => {
   const resp = await axios.delete(`${RutaApi}/detallenotas/${id}`)
   return resp.data
 }
+
+export const GenerateExcel = async () => {
+  const { data } = await axios({
+    url: 'https://api-obras.fly.dev/api/detallenotas/excel',
+    method: 'POST',
+    responseType: 'blob'
+  })
+  return data
+}

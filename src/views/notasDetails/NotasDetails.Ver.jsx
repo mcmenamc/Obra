@@ -7,7 +7,7 @@ import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import { Button, Snackbar, Toolbar } from '@mui/material'
 import { useEffect, useState } from 'react'
-import { GetDetalleNotas, DeleteDetalleNota } from '../../services/Consumo.js'
+import { GetDetalleNotas, DeleteDetalleNota, GenerateExcel } from '../../services/Consumo.js'
 import { Delete } from '@mui/icons-material'
 
 export const NotasDetailsVer = () => {
@@ -49,6 +49,17 @@ export const NotasDetailsVer = () => {
     setNotasDetails([])
 
     await ObtenerNotasDetails()
+  }
+
+  const handleExcel = async () => {
+    const data = await GenerateExcel()
+    const href = URL.createObjectURL(data)
+    const link = document.createElement('a')
+    link.href = href
+    link.download = 'Reporte-' + new Date().toLocaleDateString() + '.xlsx'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
@@ -112,6 +123,15 @@ export const NotasDetailsVer = () => {
           </Table>
         </TableContainer>
       </Paper>
+      <Button
+        variant="contained"
+        sx={{
+          marginTop: 2,
+          backgroundColor: '#3f51b5',
+          color: '#fff'
+        }}
+        onClick={handleExcel}
+      >Generar Reporte</Button>
       <Snackbar
         open={open}
         message={message}
