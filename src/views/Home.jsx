@@ -7,7 +7,13 @@ export const Home = () => {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '90vh'
+      height: {
+        xs: '85vh',
+        sm: '90vh',
+        md: '90vh',
+        lg: '95vh',
+        xl: '85vh'
+      }
     }}>
       <Box>
         <img

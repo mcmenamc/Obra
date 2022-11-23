@@ -110,7 +110,7 @@ export const NotasDetailsVer = () => {
                     <TableCell align="right">{row.PrecioUnitario}</TableCell>
                     <TableCell align="right">{row.Extra}</TableCell>
                     <TableCell align="right">
-                      <Button onClick={
+                      <Button color='error' onClick={
                         () => handleDelete(row._id)
                       }>
                         <Delete />

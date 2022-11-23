@@ -52,32 +52,33 @@ export const NavBar = () => {
       name: 'Proveedores',
       icon: <People color='info' />,
       subMenu: [
-        {
-          name: 'Ver',
-          icon: <Visibility color='primary' />,
-          link: '/provedores'
-        }
+        { name: 'Ver', icon: <Visibility color='primary' />, link: '/provedores' },
+        { name: 'Agregar', icon: <AddCircle color='success' />, link: '/provedores/add' }
+
       ]
     },
     {
       name: 'Materiales',
       icon: <Apps color='success' />,
       subMenu: [
-        { name: 'Ver', icon: <Visibility color='primary' />, link: '/materiales' }
+        { name: 'Ver', icon: <Visibility color='primary' />, link: '/materiales' },
+        { name: 'Agregar', icon: <AddCircle color='success' />, link: '/materiales/add' }
       ]
     },
     {
       name: 'Notas',
       icon: <FileCopy color='warning' />,
       subMenu: [
-        { name: 'Ver', icon: <Visibility color='primary' />, link: '/notas' }
+        { name: 'Ver', icon: <Visibility color='primary' />, link: '/notas' },
+        { name: 'Agregar', icon: <AddCircle color='success' />, link: '/notas/add' }
       ]
     },
     {
       name: 'Obras',
       icon: <Villa color='error' />,
       subMenu: [
-        { name: 'Ver', icon: <Visibility color='primary' />, link: '/obras' }
+        { name: 'Ver', icon: <Visibility color='primary' />, link: '/obras' },
+        { name: 'Agregar', icon: <AddCircle color='success' />, link: '/obras/add' }
       ]
     },
     {
