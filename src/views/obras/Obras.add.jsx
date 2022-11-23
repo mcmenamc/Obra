@@ -51,7 +51,6 @@ export const ObrasAdd = () => {
       TelResp: telefonoResponsable,
       CorreoResp: correoResponsable
     }
-    console.log(data)
     try {
       const response = await CreateObras(data)
       if (response) {
@@ -124,42 +123,36 @@ export const ObrasAdd = () => {
                 value={direccion}
                 onChange={handleChangedAll}
               />
-              <Grid container
-                sx={styles}
-                direction="row"
-                justifyContent="space-between"
-                alignItems="flex-start">
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DatePicker
-                    label="Fecha de Inicio"
-                    value={fechaInicio}
-                    onChange={(newValue) => {
-                      setFechaInicio(newValue)
-                    }}
-                    renderInput={(params) => <TextField {...params} />}
-                  />
-                  <DatePicker
-                    label="Fecha de Finalización"
-                    value={fechaFin}
-                    onChange={(newValue) => {
-                      setFechaFin(newValue)
-                    }}
-                    renderInput={(params) => <TextField {...params} />}
-                  />
-                </LocalizationProvider>
-              </Grid>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  label="Fecha de Inicio"
+                  value={fechaInicio}
+                  onChange={(newValue) => {
+                    setFechaInicio(newValue)
+                  }}
+                  renderInput={(params) => <TextField fullWidth sx={styles} {...params} />}
+                />
+                <DatePicker
+                  label="Fecha de Finalización"
+                  value={fechaFin}
+                  onChange={(newValue) => {
+                    setFechaFin(newValue)
+                  }}
+                  renderInput={(params) => <TextField fullWidth {...params} />}
+                />
+              </LocalizationProvider>
+            </Grid>
+            <Grid item xs={12} lg={6}>
               <TextField
                 fullWidth
-                sx={styles}
                 id="dueno"
                 name="dueno"
                 label="Dueño"
                 type="text"
+                sx={styles}
                 value={dueno}
                 onChange={handleChangedAll}
               />
-            </Grid>
-            <Grid item xs={12} lg={6}>
               <TextField
                 fullWidth
                 sx={styles}
