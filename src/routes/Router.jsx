@@ -13,6 +13,7 @@ import { MaterialesAdd } from '../views/materiales/Materiales.Add'
 import { ProveedoresAdd } from '../views/proveedores/Proveedores.Add'
 import { NotasAdd } from '../views/notas/Notas.Add'
 import { ObrasAdd } from '../views/obras/Obras.add'
+import { NotasFiltro } from '../views/notas/Notas.Filtro'
 
 export const Router = () => {
   return (
@@ -26,6 +27,7 @@ export const Router = () => {
       <Route path="/obras/add" element={<ObrasAdd />} />
       <Route path="/notas" element={<NotasVer />} />
       <Route path="/notas/add" element={<NotasAdd />} />
+      <Route path="/notas/filter" element={<NotasFiltro />} />
       <Route path="/notas/details" element={<NotasDetailsVer />} />
       <Route path="/notas/details/add" element={<NotasDetailsAdd />} />
       <Route path="*" element={<Error />} />

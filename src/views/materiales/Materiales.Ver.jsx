@@ -2,6 +2,7 @@
 import { GetMateriales } from '../../services/Consumo.js'
 import { DataTable } from '../../components/DataTable'
 import { useEffect, useState } from 'react'
+import { DescargarExcel } from '../../components/DescargarExcel.jsx'
 
 export const MaterialesVer = () => {
   const [materiales, setMateriales] = useState([])
@@ -22,7 +23,9 @@ export const MaterialesVer = () => {
     ObtenerProveedores()
   }, [])
 
-  return (
+  return (<>
     <DataTable Heads={Heads} Data={materiales} Title={'Materiales'} />
+    <DescargarExcel reporte='materiales' />
+  </>
   )
 }

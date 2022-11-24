@@ -2,6 +2,7 @@
 import { GetObras } from '../../services/Consumo.js'
 import { DataTable } from '../../components/DataTable'
 import { useEffect, useState } from 'react'
+import { DescargarExcel } from '../../components/DescargarExcel.jsx'
 
 export const ObrasVer = () => {
   const [obras, setObras] = useState([])
@@ -28,6 +29,10 @@ export const ObrasVer = () => {
   }, [])
 
   return (
-    <DataTable Heads={Heads} Data={obras} Title={'Obras'} />
+    <>
+      <DataTable Heads={Heads} Data={obras} Title={'Obras'} />
+      <DescargarExcel reporte='obras' />
+    </>
+
   )
 }

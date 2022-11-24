@@ -10,7 +10,10 @@ const App = () => {
   return (
     <>
       <NavBar />
-      <Container>
+      <Container sx={{
+        minHeight: '90vh',
+        marginBottom: '1.3rem'
+      }}>
         <Router />
       </Container>
       <Outlet />

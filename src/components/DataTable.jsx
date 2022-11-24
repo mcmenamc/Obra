@@ -39,7 +39,7 @@ export const DataTable = props => {
               {
                 // eslint-disable-next-line react/prop-types
                 Heads.map((head, i) => (
-                  <TableCell key={i} align="right">{head}</TableCell>
+                  <TableCell key={`${i}_${head} `} align="right">{head}</TableCell>
                 ))
               }
             </TableRow>
@@ -47,9 +47,9 @@ export const DataTable = props => {
           <TableBody>
             {
               // eslint-disable-next-line react/prop-types
-              Data.map(row => (
+              Data.map((row, i) => (
                 <TableRow
-                  key={row._id}
+                  key={`_${i}_${row._id}`}
                 >
                   <TableCell component="th" scope="row">
                     {row._id}

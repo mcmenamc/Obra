@@ -12,7 +12,8 @@ import {
   Description,
   Villa,
   AddCircle,
-  Home
+  Home,
+  FilterAlt
 } from '@mui/icons-material'
 import {
   Box,
@@ -70,7 +71,8 @@ export const NavBar = () => {
       icon: <FileCopy color='warning' />,
       subMenu: [
         { name: 'Ver', icon: <Visibility color='primary' />, link: '/notas' },
-        { name: 'Agregar', icon: <AddCircle color='success' />, link: '/notas/add' }
+        { name: 'Agregar', icon: <AddCircle color='success' />, link: '/notas/add' },
+        { name: 'Filtros', icon: <FilterAlt color='secondary' />, link: '/notas/filter' }
       ]
     },
     {
@@ -138,7 +140,10 @@ export const NavBar = () => {
         }
       >
         <Divider />
-        <ListItemButton onClick={() => navigate('/')}>
+        <ListItemButton onClick={() => {
+          handleNavigate('/')
+          setDrawer(false)
+        }}>
           <ListItemIcon>
             <Home style={{ color: '#3f51b5' }} />
           </ListItemIcon>

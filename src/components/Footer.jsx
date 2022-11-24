@@ -11,13 +11,7 @@ export const Footer = () => {
         color: 'white',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-        position: 'fixed',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000
+        alignItems: 'center'
       }}
     >
       <Container>

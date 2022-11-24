@@ -9,7 +9,7 @@ export const Home = () => {
       alignItems: 'center',
       height: {
         xs: '85vh',
-        sm: '90vh',
+        sm: '110vh',
         md: '90vh',
         lg: '95vh',
         xl: '85vh'

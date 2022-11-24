@@ -54,9 +54,14 @@ export const DeleteDetalleNota = async id => {
   return data
 }
 
-export const GenerateExcel = async () => {
+export const GetDetalleNotaByDate = async (Inicio, Fin, idOba) => {
+  const { data } = await axios.get(`${RutaApi}/detallenotas/date/${Inicio}/${Fin}/${idOba}`)
+  return data
+}
+
+export const GenerateExcel = async (collection) => {
   const { data } = await axios({
-    url: `${RutaApi}/detallenotas/excel`,
+    url: `${RutaApi}/${collection}/excel`,
     method: 'POST',
     responseType: 'blob'
   })
